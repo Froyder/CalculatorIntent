@@ -2,5 +2,6 @@
     <string name="app_name">CalculatorIntent</string>
     <string name="main_text">Хотите что-нибудь посчитать?</string>
     <string name="button_text">Запустить калькулятор</string>
-    <string name="et_hint">Здесь будет число</string>
+    <string name="result_hint">Здесь будет результат</string>
+    <string name="result_text">\Результат: \</string>
 </resources>

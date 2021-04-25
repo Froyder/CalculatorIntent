@@ -14,8 +14,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_NUMBER = 99;
-    TextView tw;
-    EditText et;
+    TextView viewNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.button).setOnClickListener(buttonListener);
-        TextView tw = findViewById(R.id.textView);
+        viewNumber = findViewById(R.id.view_number);
     }
 
     private View.OnClickListener buttonListener = v-> {
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK){
             data.getParcelableExtra("NEW_NUMBER");
             String number = data.getStringExtra("NEW_NUMBER");
-        //  et.setText(number);
+            viewNumber.setText(String.format("%s%s", getString(R.string.result_text), number));
         }
     }
 }
